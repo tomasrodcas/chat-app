@@ -8,7 +8,7 @@ import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import PropTypes from 'prop-types';
-import withStyles from '@material-ui/core/styles';
+import {withStyles} from '@material-ui/core/styles';
 import Fade from "@material-ui/core/Fade";
 
 const styles = theme => ({
@@ -35,9 +35,6 @@ const styles = theme => ({
 
 class Chat extends Component {
     formatMessage = msg => {
-        console.log(msg.content);
-        console.log(msg.sender);
-        console.log(msg.type);
         if (msg.type === 'JOIN') {
             return (
                 <ListItem key={msg.timeStamp}>
