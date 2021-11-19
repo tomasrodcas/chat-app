@@ -1,12 +1,12 @@
 FROM node:14.15.0 as builder
-WORKDIR /csc-tools-app
-ENV PATH /csc-tools-app/node_modules/.bin:$PATH
-COPY package.json /csc-tools-app/
-COPY yarn.lock  /csc-tools-app/
+WORKDIR /chat-app
+ENV PATH /chat-app/node_modules/.bin:$PATH
+COPY package.json /chat-app/
+COPY yarn.lock  /chat-app/
 
 RUN npm install
-COPY . /csc-tools-app
-RUN npm build
+COPY . /chat-app
+RUN npm run-script build
 
 FROM nginx:1.16.0-alpine
 RUN rm -rf /usr/share/nginx/html/*
