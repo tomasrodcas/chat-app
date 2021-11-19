@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
-import List from "@material-ui/core/es/List/List";
-import ListItem from "@material-ui/core/es/ListItem/ListItem";
-import Avatar from "@material-ui/core/es/Avatar/Avatar";
-import ListItemText from "@material-ui/core/es/ListItemText/ListItemText";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import Avatar from "@material-ui/core/Avatar";
+import ListItemText from "@material-ui/core/ListItemText";
 import ChatIcon from '@material-ui/icons/Chat';
-import Grid from "@material-ui/core/es/Grid/Grid";
-import TextField from "@material-ui/core/es/TextField/TextField";
-import Button from "@material-ui/core/es/Button/Button";
+import Grid from "@material-ui/core/Grid";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 import PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
-import Fade from "@material-ui/core/es/Fade/Fade";
+import withStyles from '@material-ui/core/styles';
+import Fade from "@material-ui/core/Fade";
 
 const styles = theme => ({
     root: {
