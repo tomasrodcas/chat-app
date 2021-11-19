@@ -12,6 +12,6 @@ FROM nginx:1.16.0-alpine
 RUN rm -rf /usr/share/nginx/html/*
 RUN rm /etc/nginx/conf.d/default.conf
 COPY .nginx-custom.conf /etc/nginx/conf.d/nginx-custom.conf
-COPY --from=builder /csc-tools-app/build /usr/share/nginx/html
+COPY --from=builder /chat-app/build /usr/share/nginx/html
 CMD ["nginx", "-g", "daemon off;"]
 
